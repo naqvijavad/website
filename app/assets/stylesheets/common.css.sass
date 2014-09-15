@@ -1,3 +1,5 @@
+@import variables
+
 .extra-large-font
   font-size: 40px
 
@@ -6,3 +8,23 @@
   border-top: 1px solid red
   border-bottom: 1px solid red
   height: 100vh
+
+header
+  border-bottom: 4px solid $yellowColor !important
+  background-color: $yellowColor !important
+  a
+    color: white !important
+
+.yellow-btn
+  color: white
+  border-color: $yellowColor !important
+  background: $yellowColor !important
+.yellow-btn:hover, .yellow-btn:focus, .yellow-btn:active, .yellow-btn.active
+  color: white
+  border-color: $yellowColor !important
+  background-color: $yellowColor !important
+
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-left
+  left: 0
+.carousel-control .icon-prev, .carousel-control .glyphicon-chevron-right
+  right: 0
