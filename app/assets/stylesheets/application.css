@@ -10,5 +10,8 @@
  *
  *= require bootstrap
  *= require_self
- *= require_tree .
+ *= require bootstrap_override
+ *= require common
+
+ *= require ./home
  */
