@@ -95,8 +95,29 @@
 
 .thumbnail
   border: none
-  img
-    width: 60px
-    height: 60px
-  .caption
-    text-align: center
+
+.why-section
+  .thumbnail
+    img
+      width: 60px
+      height: 60px
+    .caption
+      text-align: center
+
+.safe-section
+  .thumbnail
+    position: relative
+    padding: 0px
+    .thumb-img
+      height: 200px
+      width: 100%
+      background-size: cover !important
+    a
+      color: $hoverGreen
+    .detail
+      position: absolute
+      transition: .2s ease-out
+      top: 0px
+      background: white
+      height: 100%
+      padding: 15px
