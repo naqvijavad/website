@@ -1,4 +1,5 @@
 @import variables
+$headerHeight: 70px
 
 .extra-large-font
   font-size: 40px
@@ -10,10 +11,35 @@
   height: 100vh
 
 header
-  border-bottom: 4px solid $yellowColor !important
+  border: 0px !important
+  font-size: 17px
+  min-height: $headerHeight !important
+  text-transform: uppercase
   background-color: $yellowColor !important
   a
-    color: white !important
+    color: white
+  .navbar-header, .nav
+    min-height: $headerHeight !important
+  .navbar-brand
+    height: $headerHeight
+    padding-top: 23px
+  .nav.navbar-nav
+    li
+      height: $headerHeight
+      a
+        height: 100%
+        padding-top: 23px
+      a:hover, a:active, a:focus
+        border-bottom: 5px solid $hoverGreen
+        background: none
+        color: $hoverGreen
+        transition: .2s ease-out
+
+.carousel-indicators li
+  border: 1px solid $yellowColor
+.carousel-indicators .active
+  background: $yellowColor
+
 
 .yellow-btn
   color: white
