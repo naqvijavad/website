@@ -1,0 +1,80 @@
+@import variables
+
+.hero-button-container
+  text-align: center
+
+.hero-section
+  position: relative
+  height: 500px
+  .hero-background
+    background: url('<%= asset_path('auto-hero-1.jpg') %>')
+    background-size: cover
+    height: 500px
+  .hero-button-content
+    height: 70px
+    vertical-align: middle
+    padding-left: 20px
+    color: white
+    font-weight: 600
+    font-size: 16px
+    cursor: pointer
+    transition: .2s ease-out
+  .hero-button-content:hover, .hero-button-content:focus, .hero-button-content:active
+    text-decoration: none
+    color: $hoverGreen
+  .hero-container:after, .hero-container:before
+    content: " "
+    display: table
+
+  @media (min-width: 768px)
+    .hero-container
+      width: 750px
+      margin-right: auto
+      margin-left: auto
+    .hero-container:after, .hero-container:before
+      content: " "
+      display: table
+    .hero-content
+      width: 500px
+      background: white
+      height: 270px
+      position: absolute
+      bottom: -20px
+    .hero-button-content
+      display: table-cell
+      height: 70px
+      width: 500px
+  
+  @media (min-width: 992px)
+    .hero-container
+      width: 970px
+      margin-right: auto
+      margin-left: auto
+
+  @media (min-width: 1200px)
+    .hero-container
+      width: 1170px
+      margin-right: auto
+      margin-left: auto  
+  
+  @media (max-width: 767px)
+    .hero-content
+      background: white
+      height: 270px
+    .hero-button-content
+      display: block
+      height: 70px
+      width: 100%
+      line-height: 70px
+
+.carousel-content
+  padding: 75px 40px
+  text-align: center
+  height: 100%
+  font-size: 20px
+
+.carousel-indicators
+  right: 0px
+  top: 10px
+  width: 70px
+  left: inherit
