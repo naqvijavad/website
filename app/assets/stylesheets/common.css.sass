@@ -8,6 +8,12 @@ $headerHeight: 70px
 .hover-green
   color: $hoverGreen
 
+.grey-text
+  color: $darkGrey
+
+a.grey-text:hover
+  color: $black
+
 .yellow-bg
   background-color: $yellowColor !important
 
@@ -27,6 +33,8 @@ header
   min-height: $headerHeight !important
   text-transform: uppercase
   background-color: $yellowColor !important
+  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.35)
+  box-shadow: 0 1px 6px rgba(0,0,0,.35)
   a
     color: white
   .navbar-header, .nav
@@ -74,3 +82,19 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   p
     margin-bottom: 30px
 
+
+.footer
+  background-color: $veryLightYellow
+  color: $darkGrey
+  a:hover
+    text-decoration: none
+  p
+    font-size: 13px
+    margin-bottom: 10px
+  .autos-logo
+    font-weight: 500
+    font-size: 21px
+    opacity: 0.5
+
+.bold
+  font-weight: 500
