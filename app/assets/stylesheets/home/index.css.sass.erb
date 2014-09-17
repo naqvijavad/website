@@ -25,7 +25,6 @@
     font-size: 16px
     cursor: pointer
     transition: .2s ease-out
-    -moz-transition: .2s ease-in-out
   .hero-button-content:hover, .hero-button-content:focus, .hero-button-content:active
     text-decoration: none
     color: $hoverGreen
@@ -109,8 +108,6 @@
     height: 280px
     overflow: hidden
     box-shadow: 0px 2px 9px -2px rgba(0, 0, 0, 0.3)
-    -webkit-box-shadow: 0px 2px 9px -2px rgba(0, 0, 0, 0.3)
-    -moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5)
     .thumb-img
       height: 200px
       width: 100%
@@ -118,19 +115,17 @@
     a
       color: $hoverGreen
     
+    .caption.show
+      .title
+        color: $hoverGreen !important        
+        transition: all 1s ease-in-out
     $transitionSpeed: 0.8s
     .caption
       height: 280px
       background: white
       transition: all $transitionSpeed ease-in-out  
-      -moz-transition: all $transitionSpeed ease-in-out
-      -o-transition: all $transitionSpeed ease-in-out
-      -webkit-transition: all $transitionSpeed ease-in-out
       .title, p, a
         transition: all $transitionSpeed ease-in-out
-        -moz-transition: all $transitionSpeed ease-in-out
-        -o-transition: all $transitionSpeed ease-in-out
-        -webkit-transition: all $transitionSpeed ease-in-out
     .caption
       a.no-read
         float: none
@@ -139,7 +134,7 @@
         bottom: 10px
     .caption.no-show
       .title
-        color: $black
+        color: $black        
       a.no-read
         visibility: hidden
         opacity: 0
@@ -151,11 +146,7 @@
         visibility: hidden
         opacity: 0
     .caption.show
-      position: absolute
       transform: translate(0, -200px)
-      -webkit-transform: translate(0, -200px)
-      -o-transform: translate(0, -200px)
-      -moz-transform: translate(0, -200px)
       .title
         color: $hoverGreen
       a.no-read
