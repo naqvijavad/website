@@ -51,62 +51,170 @@
           </a> -->
         </div>
       </div>
-      <a role="button" class='hero-button-content dark-yellow-bg'>
-        <span> <i class='glyphicon glyphicon-circle-arrow-right'></i> Get 20% Extra Discount</span>
+      <a role="button" class='hero-button-content no-registering dark-yellow-bg'>
+        <span class='no-registering'>
+          <i class='glyphicon glyphicon-circle-arrow-right'></i> Get 20% Extra Discount
+        </span>
+        <span class='registering pull-right'>
+          <i class='glyphicon glyphicon-circle-arrow-right'></i> No Thanks. May be later
+        </span>
       </a>
     </div>
   </div>
 </div>
 
-<div class='page-section why-section'>
-  <div class='container'>
-    <div class='row'>      
-      <div class='col-md-6 text-center'>
-        <img class='coupons-image' src="<%= asset_path('coupons-1.jpg') %>">
+<div class='why-and-register'>
+  <div class='register-form no-show'>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-12'>
+          
+          <div class='row'>
+            <div class='register-form-1 register-form-div active'>          
+              <div class='col-md-6'>
+                <form id='register-1' class='form-horizontal'>
+                  <!-- <div class='container'> -->
+                    <div class='form-group'>
+                      <label class='control-label col-md-3'>Name:</label>
+                      <div class='col-md-9'>
+                        <input type='text' class='form-control' data-validation="required" name="user[name]" data-validation-error-msg="Please enter your full name">
+                      </div>
+                    </div>
+                    
+                    <div class='form-group'>
+                      <label class='control-label col-md-3'>Mobile:</label>
+                      <div class='col-md-9'>
+                        <input type='text' class='form-control' name="user[mobile]" data-validation="required number length" data-validation-allowing='integer' data-validation-length='10-10' data-validation-error-msg="Please enter a valid mobile number">
+                      </div>
+                    </div>
+                    
+                    <div class='form-group'>
+                      <label class='control-label col-md-3'>Email:</label>
+                      <div class='col-md-9'>
+                        <input type='text' class='form-control' name="user[email]" data-validation="email" data-validation-error-msg="Please enter a valid email address">
+                      </div>
+                    </div>
+          
+                    <div class='form-group'>
+                      <div class='col-md-12'>
+                        <input type='submit' class='btn pull-right'>
+                      </div>
+                    </div>
+                  <!-- </div> -->
+                </form>
+              </div>
+              <div class='col-md-6'>
+                <p>This is content for form 1.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class='register-form-2 register-form-div inactive'>
+              <div class='col-md-6'>
+                <form id='register-2' class='form-horizontal'>
+                  <!-- <div class='container'> -->                    
+                    <input type='hidden' id="user_email" class='form-control' name="user[email]" data-validation="email" data-validation-error-msg="Please enter a valid email address">
+                    
+                    <div class='form-group'>
+                      <label class='control-label col-md-3'>Location:</label>
+                      <div class='col-md-9'>
+                        <input type='text' class='form-control' name="user[location]">
+                      </div>
+                    </div>
+                    
+                    <div class='form-group'>
+                      <label class='control-label col-md-3'>Profession:</label>
+                      <div class='col-md-9'>
+                        <select class='form-control' name="user[profession]">              
+                          <option value='student'>Student</option>
+                          <option value='employee'>Employee</option>
+                          <option value='doctor'>Doctor</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class='form-group'>
+                      <label class='control-label col-md-3'>Married</label>
+                      <div class='col-md-9'>
+                        <label class="radio-inline">
+                          <input type='radio' name="user[married]" value='1'> Yes            
+                        </label>
+                        <label class="radio-inline">
+                          <input type='radio' name="user[married]" value='0'> No
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class='form-group'>
+                      <div class='col-md-12'>
+                        <input type='submit' class='btn pull-right'>
+                      </div>
+                    </div>
+                  <!-- </div> -->
+                </form>
+              </div>
+              <div class='col-md-6'>
+                <p>This is content for form 2.</p>
+              </div>
+            </div>
+                
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
 
-      <div class='col-md-6'>
-        <h1>Why Autos4Free?</h1>
-        <p>Autos4Free lets you commute for absolutely zero cost. Every rupee you pay for commuting in FreeAutos is equated by coupons of your choice for the same amount or mobile phone recharges.</p>
+  <div class='why-section'>
+    <div class='container'>
+      <div class='row'>      
+        <div class='col-md-6 text-center'>
+          <img class='coupons-image' src="<%= asset_path('coupons-1.jpg') %>">
+        </div>
 
-        <div class='row'>
-          <div class='col-md-12'>
-            <div class="row">
-              <div class="col-md-3 col-xs-6">
-                <div class="thumbnail">
-                  <img src="<%= asset_path('shield.jpg') %>" alt="...">
-                  <div class="caption">
-                    <p>Safe</p>                    
-                  </div>                  
-                </div>
-              </div>
+        <div class='col-md-6'>
+          <h1>Why Autos4Free?</h1>
+          <p>Autos4Free lets you commute for absolutely zero cost. Every rupee you pay for commuting in FreeAutos is equated by coupons of your choice for the same amount or mobile phone recharges.</p>
 
-              <div class="col-md-3 col-xs-6">
-                <div class="thumbnail">
-                  <img src="<%= asset_path('driver.jpg') %>" alt="...">
-                  <div class="caption">
-                    <p>Verified</p>                    
+          <div class='row'>
+            <div class='col-md-12'>
+              <div class="row">
+                <div class="col-md-3 col-xs-6">
+                  <div class="thumbnail">
+                    <img src="<%= asset_path('shield.jpg') %>" alt="...">
+                    <div class="caption">
+                      <p>Safe</p>                    
+                    </div>                  
                   </div>
                 </div>
-              </div>
 
-              <div class="col-md-3 col-xs-6">
-                <div class="thumbnail">
-                  <img src="<%= asset_path('free-tag.jpg') %>" alt="...">
-                  <div class="caption">
-                    <p>Free</p>                    
+                <div class="col-md-3 col-xs-6">
+                  <div class="thumbnail">
+                    <img src="<%= asset_path('driver.jpg') %>" alt="...">
+                    <div class="caption">
+                      <p>Verified</p>                    
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="col-md-3 col-xs-6">
-                <div class="thumbnail">
-                  <img src="<%= asset_path('smile.jpg') %>" alt="...">
-                  <div class="caption">
-                    <p>Polite</p>                    
+                <div class="col-md-3 col-xs-6">
+                  <div class="thumbnail">
+                    <img src="<%= asset_path('free-tag.jpg') %>" alt="...">
+                    <div class="caption">
+                      <p>Free</p>                    
+                    </div>
                   </div>
                 </div>
-              </div>              
+
+                <div class="col-md-3 col-xs-6">
+                  <div class="thumbnail">
+                    <img src="<%= asset_path('smile.jpg') %>" alt="...">
+                    <div class="caption">
+                      <p>Polite</p>                    
+                    </div>
+                  </div>
+                </div>              
+              </div>
             </div>
           </div>
         </div>
@@ -114,6 +222,7 @@
     </div>
   </div>
 </div>
+  
 
 <div class='page-section grey-bg safe-section'>
   <div class='container'>
@@ -210,82 +319,6 @@
       <div class='col-md-12' style="margin-top: 80px;">
         <p class='pull-left'>Design inspired from Google. You have all rights to copy.</p>
         <p class='pull-right autos-logo'>Autos4Free</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class='register-form'>
-  <div class='row'>
-    <div class='col-md-12'>
-      <div class='col-md-6'>
-        <form id='register-1' class='form-horizontal'>
-          
-          <div class='form-group'>
-            <label class='control-label col-md-3'>Name:</label>
-            <div class='col-md-9'>
-              <input type='text' class='form-control' data-validation="required" name="user[name]" data-validation-error-msg="Please enter your full name">
-            </div>
-          </div>
-          
-          <div class='form-group'>
-            <label class='control-label col-md-3'>Mobile:</label>
-            <div class='col-md-9'>
-              <input type='text' class='form-control' name="user[mobile]" data-validation="required number length" data-validation-allowing='integer' data-validation-length='10-10' data-validation-error-msg="Please enter a valid mobile number">
-            </div>
-          </div>
-          
-          <div class='form-group'>
-            <label class='control-label col-md-3'>Email:</label>
-            <div class='col-md-9'>
-              <input type='text' class='form-control' name="user[email]" data-validation="email" data-validation-error-msg="Please enter a valid email address">
-            </div>
-          </div>
-
-          <div class='form-group'>
-            <div class='col-md-12'>
-              <input type='submit' class='btn pull-right'>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class='col-md-6'>
-        <form id='register-2' class='form-horizontal' style='display:none;'>
-
-          <div class='form-group'>
-            <label class='control-label col-md-3'>Email:</label>
-            <div class='col-md-9'>
-              <input type='text' id="user_email" class='form-control' name="user[email]" data-validation="email" data-validation-error-msg="Please enter a valid email address">
-            </div>
-          </div>
-          
-          <div class='form-group'>
-            <label class='control-label col-md-3'>Location:</label>
-            <div class='col-md-9'>
-              <input type='text' class='form-control' name="user[location]">
-            </div>
-          </div>
-          
-          <div class='form-group'>
-            <label class='control-label col-md-3'>Profession:</label>
-            <div class='col-md-9'>
-              <select class='form-control' name="user[profession]">              
-                <option value='student'>Student</option>
-                <option value='employee'>Employee</option>
-                <option value='doctor'>Doctor</option>
-              </select>
-            </div>
-          </div>
-
-          <div class='form-group'>
-            <label class='control-label col-md-3'>Married</label>
-            <div class='col-md-9'>
-              <input type='radio' class='form-control' name="user[married]" value='1'> Yes            
-              <input type='radio' class='form-control' name="user[married]" value='0'> No
-            </div>
-          </div>
-        </form>
       </div>
     </div>
   </div>

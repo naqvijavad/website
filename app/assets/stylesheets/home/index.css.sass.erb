@@ -5,13 +5,13 @@
 
 @media (min-width: 768px)
   .hero-section
-    margin-bottom: 50px
     height: 500px
 @media (max-width: 767px)
   .hero-section
     height: 770px
 .hero-section
   position: relative
+  z-index: 3
   .hero-background
     background: url('<%= asset_path('auto-hero-1.jpg') %>')
     background-size: cover
@@ -24,7 +24,29 @@
     font-weight: 600
     font-size: 16px
     cursor: pointer
-    transition: .2s ease-out
+    transition: .8s ease-out
+    position: relative
+    // span
+    //   transition: .2s ease-out
+    .no-registering, .registering
+      transition: .8s ease-out
+    .registering
+      color: $darkGrey
+      margin-right: 10px
+  .hero-button-content.no-registering
+    .no-registering
+      visibility: visible
+      opacity: 1
+    .registering
+      visibility: hidden
+      opacity: 0
+  .hero-button-content.registering
+    .no-registering
+      visibility: hidden
+      opacity: 0
+    .registering      
+      visibility: visible
+      opacity: 1
   .hero-button-content:hover, .hero-button-content:focus, .hero-button-content:active
     text-decoration: none
     color: $grey
@@ -94,6 +116,7 @@
   border: none
 
 .why-section
+  transition: all .8s ease-in-out
   .thumbnail
     img
       width: 60px
@@ -170,4 +193,58 @@
   li:before
     content: "\2713\0020"
     margin-right: 10px
-    
+
+.why-and-register
+  position: relative
+  z-index: 1
+
+
+.register-form
+  background: $grey
+  overflow: hidden  
+  transition: all .8s ease-in-out
+.register-form.show
+  padding: 50px 0px
+.register-form.no-show
+  padding: 0px
+.register-form-div
+  position: absolute
+  width: 100%
+  height: 245px
+.register-form-div.active
+  transition: all .8s ease-in-out
+  visibility: visible
+  opacity: 1
+
+.register-form-div.inactive
+  visibility: hidden
+  opacity: 0
+
+@media (min-width: 768px)
+  .register-form.show
+    height: 320px    
+  .register-form.no-show
+    height: 0px
+  .register-form-div
+    top: 300px
+  .register-form-div.active
+    top: 0px
+
+@media (max-width: 767px)
+  .register-form.show
+    height: 565px
+  .register-form.no-show
+    height: 0px
+  .register-form-div
+    top: 565px
+  .register-form-div.active
+    top: 0px
+
+.form-control
+  border-width: 0px 0px 1px
+  box-shadow: none !important
+  border-top-left-radius: 0px
+  border-top-right-radius: 0px
+  border-bottom-right-radius: 0px
+  border-bottom-left-radius: 0px
+  background: none
