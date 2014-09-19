@@ -2,6 +2,12 @@ $.app =
   fn: {}  
 
 $(document).ready ->
+
+  # $('#same-page-nav').onePageNav()
+  $('#same-page-nav a').mPageScroll2id
+    highlightSelector:"#same-page-nav a",
+    scrollSpeed: 1000
+
   $('.safe-section a').bind "click", (event)-> 
     target = $(event.target)
     caption = target.closest(".caption")
