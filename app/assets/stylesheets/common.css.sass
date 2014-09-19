@@ -19,6 +19,10 @@ a.grey-text:hover
 
 .grey-bg
   background: $grey
+
+.dark-grey-bg
+  background: $bgDarkGrey
+  color: white
   
 
 .pagefull-section
@@ -48,11 +52,17 @@ header
       a
         height: 100%
         padding-top: 23px
-      a:hover, a:active, a:focus
+      a:hover, a:active, a:focus, a.mPS2id-highlight
         border-bottom: 5px solid $hoverGreen
         background: none
         color: $hoverGreen
         transition: .2s ease-out
+
+.navbar-toggle
+  padding: 17px 10px
+  .icon-bar
+    background-color: $darkGrey
+
 
 .carousel-indicators li
   border: 1px solid $yellowColor
@@ -78,7 +88,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
   font-weight: 200
 
 .page-section
-  padding: 30px 0px
+  padding: 60px 0px 50px 0px
   p
     margin-bottom: 30px
 
