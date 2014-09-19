@@ -1,3 +1,6 @@
+$.app =
+  fn: {}  
+
 $(document).ready ->
   $('.safe-section a').bind "click", (event)-> 
     target = $(event.target)
@@ -10,7 +13,13 @@ $(document).ready ->
 
   $.validate()
 
-  # showForm2 = (email) ->
+  $.app.fn.showRegsiterForm2 = ()->
+    $('#register-1').closest('.register-form-div').addClass('inactive').removeClass('active')
+    $('#register-2').closest('.register-form-div').addClass('active').removeClass('inactive')
+
+  $.app.fn.showRegsiterForm1 = ()->
+    $('#register-2').closest('.register-form-div').addClass('inactive').removeClass('active')
+    $('#register-1').closest('.register-form-div').addClass('active').removeClass('inactive')
     
   $('#register-1').on 'submit', (event) ->
     form = $(event.target)
@@ -22,8 +31,7 @@ $(document).ready ->
         if resp.success == 1
           # showForm2(resp.user.email)
           console.log(resp)
-          $('#register-1').closest('.register-form-div').addClass('inactive').removeClass('active')
-          $('#register-2').closest('.register-form-div').addClass('active').removeClass('inactive')
+          $.app.fn.showRegsiterForm2()
           $('#register-2 input#user_email').val(resp.user.email)
         else
           alert("Something went wrong. Please try again.")
@@ -52,13 +60,11 @@ $(document).ready ->
       # Show the register forms now.      
       $('.register-form').removeClass('no-show').addClass('show')
       $('.hero-button-content').find('.button-text').html('No Thanks. May be Later')
-      $('.hero-button-content').find('i.glyphicon').removeClass('glyphicon-circle-arrow-down').addClass('glyphicon-circle-arrow-up')
       $('.hero-button-content').removeClass('dark-yellow-bg').addClass('grey-bg')
       $('.hero-button-content').removeClass('no-registering').addClass('registering')
     else
       # Don't show the register forms.
       $('.register-form').removeClass('show').addClass('no-show')
-      $('.hero-button-content').find('i.glyphicon').removeClass('glyphicon-circle-arrow-up').addClass('glyphicon-circle-arrow-down')
       $('.hero-button-content').removeClass('grey-bg').addClass('dark-yellow-bg')
       $('.hero-button-content').removeClass('registering').addClass('no-registering')
       $('.hero-button-content').find('.button-text').html('Get 20% Extra Discount')

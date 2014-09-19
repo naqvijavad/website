@@ -33,6 +33,12 @@
     .registering
       color: $darkGrey
       margin-right: 10px
+    // @media (max-width: 767px)
+    //   .registering
+    //     float: left
+    // @media (min-width: 768px)
+    //   .registering
+    //     float: right
   .hero-button-content.no-registering
     .no-registering
       visibility: visible
@@ -44,9 +50,9 @@
     .no-registering
       visibility: hidden
       opacity: 0
-    .registering      
+    .registering    
       visibility: visible
-      opacity: 1
+      opacity: 1  
   .hero-button-content:hover, .hero-button-content:focus, .hero-button-content:active
     text-decoration: none
     color: $grey
@@ -210,7 +216,7 @@
 .register-form-div
   position: absolute
   width: 100%
-  height: 245px
+  // height: 245px
 .register-form-div.active
   transition: all .8s ease-in-out
   visibility: visible
@@ -220,11 +226,25 @@
   visibility: hidden
   opacity: 0
 
-@media (min-width: 768px)
-  .register-text
-    width: 600px
-    margin-left: auto
-    margin-right: auto
+// @media (min-width: 768px)
+//   .register-text
+//     width: 600px
+//     margin-left: auto
+//     margin-right: auto
+
+
+// @media (min-width: 768px)
+//   .register-form.show
+//     height: 730px    
+//   .register-form.no-show
+//     height: 0px
+//   .register-form-div
+//     top: 730px
+//   .register-form-div.active
+//     top: 0px
+
+
+@media (min-width: 992px)
   .register-form.show
     height: 320px    
   .register-form.no-show
@@ -234,13 +254,13 @@
   .register-form-div.active
     top: 0px
 
-@media (max-width: 767px)
+@media (max-width: 991px)
   .register-form.show
-    height: 565px
+    height: 730px
   .register-form.no-show
     height: 0px
   .register-form-div
-    top: 565px
+    top: 730px
   .register-form-div.active
     top: 0px
 
