@@ -16,3 +16,6 @@
 /tmp
 /config/database.yml
 /config/application.yml
+
+# Mac finder artifacts
+.DS_Store
